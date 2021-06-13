@@ -15,3 +15,9 @@ $ python3 python/main.py
 ```
 $ php php/index.php
 ```
+
+## nodejs version
+
+```
+$ node nodejs/index.js
+```
