@@ -21,3 +21,9 @@ $ php php/index.php
 ```
 $ node nodejs/index.js
 ```
+
+## java version
+
+```
+$ java java/main.java
+```
