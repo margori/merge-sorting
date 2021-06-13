@@ -57,7 +57,5 @@ if __name__ == '__main__':
     original_list = [random.randint(0, size * 10) for i in range(0, size)]
     print(f'Original list {original_list}')
 
-    print('Sorting...')
-
     sorted_list = merge_sort(original_list)
     print(f'  Sorted list {sorted_list}')

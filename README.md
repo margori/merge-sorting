@@ -9,3 +9,9 @@ Python2 is obsolete. Use Python3.
 ```
 $ python3 python/main.py
 ```
+
+## PHP version
+
+```
+$ php php/index.php
+```
