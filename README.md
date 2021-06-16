@@ -27,3 +27,9 @@ $ node nodejs/index.js
 ```
 $ java java/main.java
 ```
+
+## golang version
+
+```
+$ go run ./golang/
+```
