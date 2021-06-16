@@ -33,3 +33,9 @@ $ java java/main.java
 ```
 $ go run ./golang/
 ```
+
+## ruby version
+
+```
+$ ruby ruby/main.rb
+```
