@@ -39,3 +39,10 @@ $ go run ./golang/
 ```
 $ ruby ruby/main.rb
 ```
+
+## rust version
+
+```
+$ cd rust
+$ cargo run
+```
