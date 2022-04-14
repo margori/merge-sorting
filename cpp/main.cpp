@@ -27,58 +27,58 @@ vector<vector<int>> split_list_in_halves(vector<int> list)
   return result;
 }
 
-vector<int> mergeSortedLists(vector<int> leftList, vector<int> rightList)
+vector<int> merge_sorted_lists(vector<int> left_list, vector<int> right_list)
 {
-  int leftindex = 0;
-  int rightIndex = 0;
-  vector<int> resultList;
+  int left_index = 0;
+  int right_index = 0;
+  vector<int> result_list;
 
   // compare elements and add minor
-  while (leftindex < leftList.size() && rightIndex < rightList.size())
+  while (left_index < left_list.size() && right_index < right_list.size())
   {
-    if (leftList.at(leftindex) < rightList.at(rightIndex))
+    if (left_list.at(left_index) < right_list.at(right_index))
     {
-      resultList.push_back(leftList.at(leftindex));
-      leftindex++;
+      result_list.push_back(left_list.at(left_index));
+      left_index++;
     }
     else
     {
-      resultList.push_back(rightList.at(rightIndex));
-      rightIndex++;
+      result_list.push_back(right_list.at(right_index));
+      right_index++;
     }
   }
   // add remaining left elements
-  while (leftindex < leftList.size())
+  while (left_index < left_list.size())
   {
-    resultList.push_back(leftList.at(leftindex));
-    leftindex++;
+    result_list.push_back(left_list.at(left_index));
+    left_index++;
   }
 
   // add remaining right elements
-  while (rightIndex < rightList.size())
+  while (right_index < right_list.size())
   {
-    resultList.push_back(rightList.at(rightIndex));
-    rightIndex++;
+    result_list.push_back(right_list.at(right_index));
+    right_index++;
   }
 
-  return resultList;
+  return result_list;
 }
 
-vector<int> merge_sort(vector<int> currentList)
+vector<int> merge_sort(vector<int> current_list)
 {
-  if (currentList.size() == 1)
+  if (current_list.size() == 1)
   {
-    return currentList;
+    return current_list;
   }
 
-  vector<vector<int>> halves = split_list_in_halves(currentList);
-  vector<int> leftList = halves.at(0);
+  vector<vector<int>> halves = split_list_in_halves(current_list);
+  vector<int> left_list = halves.at(0);
   vector<int> right_list = halves.at(1);
 
-  vector<int> sortedLeftList = merge_sort(leftList);
+  vector<int> sortedleft_list = merge_sort(left_list);
   vector<int> sortedRightLest = merge_sort(right_list);
 
-  return mergeSortedLists(sortedLeftList, sortedRightLest);
+  return merge_sorted_lists(sortedleft_list, sortedRightLest);
 }
 
 void print(vector<int> list)
@@ -100,14 +100,14 @@ int main()
   int size = 0;
   cin >> size;
 
-  vector<int> originalList = create_random_list(size);
+  vector<int> original_list = create_random_list(size);
   cout << "Original list ";
-  print(originalList);
+  print(original_list);
   cout << endl;
 
-  vector<int> sortedList = merge_sort(originalList);
+  vector<int> sorted_list = merge_sort(original_list);
   cout << "  Sorted list ";
-  print(sortedList);
+  print(sorted_list);
   cout << endl;
 
   cout << endl;
