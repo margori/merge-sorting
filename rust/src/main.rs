@@ -8,7 +8,7 @@ use rand::Rng;
 fn main() {
   println!("Welcome to Merge Sorting by Margori");
 
-  println!("Enter amount of elements to sort?");
+  println!("Enter amount of elements to sort:");
 
   let mut size_string = String::new();
 
@@ -16,7 +16,7 @@ fn main() {
     .read_line(&mut size_string)
     .expect("Fail to read input");
 
-  let size: u8 = size_string.trim().parse().expect("Not a number");
+  let size: u32 = size_string.trim().parse().expect("Not a number");
 
   let original_list = create_random_list(size);
   println!("Original list {:?}", original_list);
@@ -25,18 +25,18 @@ fn main() {
   println!("  Sorted list {:?}", sorted_list);
 }
 
-fn create_random_list(size: u8) -> Vec<u8> {
+fn create_random_list(size: u32) -> Vec<u32> {
   let mut rng = thread_rng();
-  let mut result: Vec<u8> = Vec::new();
+  let mut result: Vec<u32> = Vec::new();
 
   for _number in 1..size {
-    result.push(rng.gen_range(0, 255));
+    result.push(rng.gen_range(0, size * 10));
   }
 
   result
 }
 
-fn merge_sort(current_list: Vec<u8>) -> Vec<u8> {
+fn merge_sort(current_list: Vec<u32>) -> Vec<u32> {
   if current_list.len() == 1 {
     return current_list;
   }
@@ -49,15 +49,15 @@ fn merge_sort(current_list: Vec<u8>) -> Vec<u8> {
   merge_sorted_lists(sorted_left_list, sorted_right_list)
 }
 
-fn split_list_in_halves(list: Vec<u8>) -> (Vec<u8>, Vec<u8>) {
+fn split_list_in_halves(list: Vec<u32>) -> (Vec<u32>, Vec<u32>) {
   let middle = list.len() / 2;
   (list[0..middle].to_vec(), list[middle..].to_vec())
 }
 
-fn merge_sorted_lists(left_list: Vec<u8>, right_list: Vec<u8>) -> Vec<u8> {
+fn merge_sorted_lists(left_list: Vec<u32>, right_list: Vec<u32>) -> Vec<u32> {
   let mut left_index = 0;
   let mut right_index = 0;
-  let mut result_list: Vec<u8> = Vec::new();
+  let mut result_list: Vec<u32> = Vec::new();
 
   // compare elements and add minor
   while left_index < left_list.len() && right_index < right_list.len() {
