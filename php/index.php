@@ -61,7 +61,7 @@ function merge_sort($current_list) {
 
 print("Welcome to Merge Sorting by Margori\n\n");
 
-$size = readline("Enter amount of elements to sort? ");
+$size = readline("Enter amount of elements to sort: ");
 
 $original_list = create_random_list($size);
 printf("Original list [%s]\n", implode(', ', $original_list));

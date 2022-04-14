@@ -74,10 +74,11 @@ class MergeSorting {
 
     public static void main(String[] args) {
         System.out.println("Welcome to Merge Sorting by Margori\n\n");
-        System.out.print("Enter amount of elements to sort? ");
+        System.out.print("Enter amount of elements to sort: ");
 
         Scanner in = new Scanner(System.in);
         int size = in.nextInt();
+        in.close();
 
         int[] originalList = create_random_list(size);
         System.out.print("Original list ");

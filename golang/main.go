@@ -67,7 +67,7 @@ func createRandomList(size int) []int {
 func main() {
 	fmt.Print("Welcome to Merge Sorting by Margori\n\n")
 
-	fmt.Print("Enter amount of elements to sort? ")
+	fmt.Print("Enter amount of elements to sort: ")
 	var size int
 	_, err := fmt.Scanln(&size)
 	if err != nil {

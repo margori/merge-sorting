@@ -52,7 +52,7 @@ def merge_sort(current_list):
 if __name__ == '__main__':
     print('Welcome to Merge Sorting by Margori\n')
 
-    size = int(input("Enter amount of elements to sort? "))
+    size = int(input("Enter amount of elements to sort: "))
 
     original_list = [random.randint(0, size * 10) for i in range(0, size)]
     print(f'Original list {original_list}')

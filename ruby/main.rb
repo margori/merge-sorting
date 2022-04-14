@@ -57,7 +57,7 @@ end
 
 puts("Welcome to Merge Sorting by Margori\n\n")
 
-print('Enter amount of elements to sort? ')
+print('Enter amount of elements to sort: ')
 size = gets.to_i
 
 puts "\n"
