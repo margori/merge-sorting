@@ -46,3 +46,11 @@ $ ruby ruby/main.rb
 $ cd rust
 $ cargo run
 ```
+
+## C++ version
+
+```
+$ cd cpp
+$ g++ main.cpp -o main
+$ ./main
+```
